@@ -1,0 +1,108 @@
+/* ===== General Container ===== */
+.game-container {
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+/* ===== Game Title ===== */
+.game-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* ===== Score Text ===== */
+.game-score {
+    margin-top: 12px;
+    font-size: 18px;
+    opacity: 0.85;
+}
+
+/* ===== Game Over ===== */
+.game-over {
+    color: #ff4444;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(255, 50, 50, 0.8);
+}
+
+/* ===== Canvas Styling ===== */
+.tetris-canvas,
+.snake-canvas,
+.dino-canvas {
+    display: block;
+    margin: 20px auto;
+    background: #111;
+    border-radius: 6px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+        0 0 15px rgba(0, 255, 255, 0.15),
+        inset 0 0 8px rgba(255, 255, 255, 0.05);
+}
+
+/* ===== Back Button (at bottom center) ===== */
+.back-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.back-btn {
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: 0.25s;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+}
+
+.game-box {
+    position: relative;
+    width: 600px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.game-box canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 500px) {
+    .game-title {
+        font-size: 22px;
+    }
+
+    .game-score {
+        font-size: 16px;
+    }
+
+    .back-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .tetris-canvas,
+    .snake-canvas {
+        width: 95% !important;
+        height: auto !important;
+    }
+}

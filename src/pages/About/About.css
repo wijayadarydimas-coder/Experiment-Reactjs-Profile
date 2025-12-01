@@ -1,0 +1,87 @@
+/* ===========================
+   ABOUT PAGE CONTAINER
+=========================== */
+.about-container {
+    padding: 20px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.about-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+/* ===========================
+   ABOUT CARD
+=========================== */
+.about-card {
+    background: rgba(20, 20, 20, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 25px;
+    border-radius: 18px;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.about-card ul {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+.about-card li {
+    margin-bottom: 6px;
+    color: #dfdfdf;
+}
+
+/* ===========================
+   LOCATION MAP
+=========================== */
+.about-loc-title {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #00eaff;
+}
+
+.about-map-wrapper {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s ease;
+}
+
+.about-map-wrapper.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-map {
+    width: 100%;
+    height: 430px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 600px) {
+    .about-map {
+        height: 330px;
+    }
+
+    .about-card {
+        padding: 18px;
+    }
+}

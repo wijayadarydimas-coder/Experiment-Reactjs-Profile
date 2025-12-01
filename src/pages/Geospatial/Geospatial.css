@@ -1,0 +1,127 @@
+/* ============================
+   GEOSPATIAL CONTAINER
+============================ */
+.geo-container {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Title */
+.geo-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* ============================
+   SEARCH BOX
+============================ */
+.geo-search-box {
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+}
+
+.geo-search-box input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    font-size: 16px;
+    outline: none;
+    color: #000;
+    /* text hitam */
+    background: #fff;
+    /* background putih */
+}
+
+/* Loading text */
+.geo-loading {
+    margin-top: 5px;
+    color: #00eaff;
+    font-size: 14px;
+}
+
+/* ============================
+   DROPDOWN SUGGESTIONS
+============================ */
+.geo-suggestion-list {
+    position: absolute;
+    top: 48px;
+    width: 100%;
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    max-height: 180px;
+    overflow-y: auto;
+    border: 1px solid #333;
+    z-index: 99999;
+    /* selalu di atas map */
+}
+
+.geo-suggestion-list li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #333;
+}
+
+.geo-suggestion-list li:hover {
+    background: #444;
+}
+
+/* ============================
+   MAP WRAPPER
+============================ */
+.geo-map-wrapper {
+    margin: 25px auto;
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+    /* di bawah navbar & dropdown */
+}
+
+/* Leaflet map proper */
+.geo-map {
+    height: 450px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1 !important;
+    /* map harus paling bawah */
+}
+
+/* Safety: all Leaflet layers lower than navbar */
+.leaflet-container,
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+    z-index: 1 !important;
+}
+
+/* ============================
+   COORDINATE OUTPUT
+============================ */
+.geo-coordinates {
+    margin-top: 20px;
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 600px) {
+    .geo-map {
+        height: 350px;
+    }
+}

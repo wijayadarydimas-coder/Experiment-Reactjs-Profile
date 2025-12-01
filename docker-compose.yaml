@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  vibes-code:
+    container_name: Dimas-Code
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    restart: unless-stopped
